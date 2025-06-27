@@ -1,0 +1,159 @@
+# SystemVerilog/Verilog Design Files
+#==================================
+
+# Compiled simulation files
+*.vcd
+*.vpd
+*.wlf
+*.vstf
+*.fst
+*.ghw
+*.vdb/
+*.shm/
+*.trn
+*.dsn
+
+# Simulator specific files
+transcript
+*.log
+*.rpt
+*.err
+*.out
+work/
+modelsim.ini
+vsim.wlf
+wlft*
+
+# Synthesis tool outputs
+#=======================
+
+# Xilinx
+*.xpr
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.srcs/
+*.gen/
+*.bit
+*.ltx
+vivado*.jou
+vivado*.log
+.Xil/
+*.tcl.bak
+
+# Intel/Altera Quartus
+*.qpf
+*.qsf
+*.qws
+*.done
+*.pin
+*.summary
+*.smsg
+db/
+incremental_db/
+output_files/
+*.qarlog
+*.qar
+
+# Synopsys
+*.svf
+*.syn
+*.mr
+*.pvl
+command.log
+default.svf
+
+# Cadence
+*.cmd
+*.log.tee
+cds.lib
+hdl.var
+
+# Common synthesis outputs
+*.sdc
+*.sdf
+*.dcp
+*.edif
+*.ngc
+*.edf
+
+# Simulation and testbench outputs
+#================================
+*.vcd
+*.vpd
+*.wdb
+*.fsdb
+*.ndb
+*.shm/
+*.trn
+*.dsn
+coverage/
+waves/
+*.coverage
+
+# Temporary and backup files
+#===========================
+*~
+*.bak
+*.orig
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# IDE and Editor files
+#====================
+.vscode/
+*.swp
+*.swo
+*~
+.idea/
+
+# OS generated files
+#==================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build and output directories
+#=============================
+build/
+dist/
+*.tar.gz
+*.zip
+
+# Documentation build files
+#==========================
+docs/_build/
+*.pdf
+*.aux
+*.fdb_latexmk
+*.fls
+*.toc
+*.out
+*.nav
+*.snm
+*.vrb
+
+# Python (if you use Python scripts)
+#===================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+
+# Reports and analysis
+#====================
+*.timing
+*.power
+*.area
+*.utilization
