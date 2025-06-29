@@ -83,3 +83,36 @@ open_run impl_three_block_style
 report_utilization -file utilization_three_block.rpt
 report_timing_summary -file timing_three_block.rpt
 ```
+
+## Design Runs Analysis
+
+This section provides a comprehensive analysis of the synthesis and implementation results for different FSM coding styles. All implementations target the same UART transmitter functionality and use identical constraints.
+
+### Implementation Results Summary
+
+![Vivado Design Runs](./Design_Runs.png)
+
+| FSM Style               | WNS (ns) | TNS (ns) | WHS (ns) | THS (ns) | WBRS | TPWS | Total Power (W) | Failed Routes | Methodology Violations | LUT | FF |
+| ----------------------- | -------- | -------- | -------- | -------- | ---- | ---- | --------------- | ------------- | ---------------------- | --- | -- |
+| One Block               | 6.138    | 0        | \-       | 0.167    | 0    | 0    | 0.147           | 0             | 10 Warn                | 29  | 26 |
+| Two Block Combinational | 6.176    | 0        | \-       | 0.197    | 0    | 0    | 0.147           | 0             | 10 Warn                | 29  | 25 |
+| Two Block Sequential    | 6.138    | 0        | \-       | 0.167    | 0    | 0    | 0.147           | 0             | 10 Warn                | 29  | 26 |
+| Three Block             | 6.176    | 0        | \-       | 0.197    | 0    | 0    | 0.147           | 0             | 10 Warn                | 29  | 25 |
+
+### Key Findings
+
+#### Timing Performance
+- **Worst Negative Slack (WNS)**: All implementations achieve positive slack, indicating timing requirements are met
+  - Two Block Combinational and Three Block styles show slightly better WNS (6.176 ns vs 6.138 ns)
+  - All designs have zero Total Negative Slack (TNS), confirming no timing violations
+
+#### Resource Utilization
+- **LUT Usage**: Consistent across all styles (29 LUTs)
+- **Flip-Flop Usage**: 
+  - Two Block Combinational and Three Block: 25 FFs
+  - One Block and Two Block Sequential: 26 FFs
+  - The combinational and three-block styles show 1 FF savings
+
+
+### Recommendations
+> The minimal differences in implementation results demonstrate that FSM coding style choice should prioritize code readability, maintainability, and team preferences rather than performance concerns for this particular design complexity.
