@@ -5,7 +5,9 @@ This project provides a comprehensive comparison of different FSM (Finite State 
 The following FSM styles are compared:
 -   One-block
 -   Two-block
--   Three-block (Recommended)
+-   Three-block
+
+> All implementations pass the same gate-level simulation tests, ensuring functional equivalence.
 
 ## Project Structure
 
